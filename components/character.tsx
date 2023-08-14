@@ -1,7 +1,10 @@
+"use client"
+
 import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
 import {Button} from "@nextui-org/button"
 import {Chip} from "@nextui-org/chip"
 import Image from "next/image";
+
 import { Popover, PopoverTrigger, PopoverContent} from "@nextui-org/popover";
 
 const Character = (props:any) => {
