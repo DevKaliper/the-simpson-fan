@@ -19,7 +19,7 @@ const Character = (props:any) => {
         height={2000}
         priority
         
-          alt="Card example background"
+          alt={character.Nombre}
           className="z-0 w-1/2 mx-auto my-auto object-cover"
           src={character.Imagen}
         />
