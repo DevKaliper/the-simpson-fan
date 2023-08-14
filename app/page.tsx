@@ -3,6 +3,7 @@
 import Character from '../components/character';
 import { getCharacter } from '@/controllers/request';
 import {useState, useEffect} from "react"
+import {Pagination, PaginationItem, PaginationCursor} from "@nextui-org/pagination";
 export default function Home() {
 	const fetchinCharacter =  async() => {
 		const request = await getCharacter()
@@ -13,6 +14,12 @@ export default function Home() {
 	useEffect(() => {
 		fetchinCharacter()
 	}, [])
+
+	const handleChangePagination = (page:number) => {
+		console.log(page)
+
+		
+	}
 
 	return (
 		
@@ -28,6 +35,8 @@ export default function Home() {
 					)) : "Cargando"
 				}
 			</section>
+			<footer className='my-5 w-full grid place-items-center'> <Pagination onChange={(page:number)=>handleChangePagination(page)} total={10} initialPage={1} /> </footer>
+			
 		</main>
 	);
 }
