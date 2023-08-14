@@ -1,16 +1,33 @@
-import NextLink from "next/link";
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code"
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 
+"use client"
+import Character from '../components/character';
+import { getCharacter } from '@/controllers/request';
+import {useState, useEffect} from "react"
 export default function Home() {
+	const fetchinCharacter =  async() => {
+		const request = await getCharacter()
+		console.log(request)
+		setCharacter(request)
+	}
+	const [character, setCharacter] = useState([])
+	useEffect(() => {
+		fetchinCharacter()
+	}, [])
+
 	return (
-		<div>
-			<h1>hola mundo</h1>
-		</div>
+		
+		<main>
+			<h1 className='text-4xl dark:text-yellow-400 font-semibold'>Personajes</h1>
+			<section>
+				{
+					character ? character.map((r:any) => (
+						<div key={r._id}>
+							<Character  character={r}/>
+						</div>
+						
+					)) : "Cargando"
+				}
+			</section>
+		</main>
 	);
 }

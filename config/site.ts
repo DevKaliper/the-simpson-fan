@@ -6,22 +6,22 @@ export const siteConfig = {
 	navItems: [
 		{
 			label: "Quotes",
-			href: "/",
+			href: "/qq",
 		},
     {
       label: "Fan Page",
-      href: "/",
+      href: "/ff",
     },
 
 	],
 	navMenuItems: [
 		{
 			label: "Quotes",
-			href: "/",
+			href: "/q",
 		},
 		{
 			label: "Fan Page",
-			href: "/",
+			href: "/f",
 		},
 		{
 			label: "github",
