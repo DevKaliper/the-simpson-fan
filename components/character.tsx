@@ -7,7 +7,7 @@ import { Popover, PopoverTrigger, PopoverContent} from "@nextui-org/popover";
 const Character = (props:any) => {
     const character = props.character
     return (
-        <Card isFooterBlurred isBlurred className="w-[400px] h-[300px] col-span-12 sm:col-span-5">
+        <Card isFooterBlurred isBlurred className="max-w-[400px] h-[300px] col-span-12 sm:col-span-5">
         <CardHeader className="absolute z-10 top-1 flex-col items-start">
           <Chip color={character.Estado =="Vivo" ? "success" : character.Estado =="Fallecido" ? "danger" : "default"} variant="shadow">{character.Estado}</Chip>
         </CardHeader>
