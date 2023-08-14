@@ -2,6 +2,7 @@ import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
 import {Button} from "@nextui-org/button"
 import {Chip} from "@nextui-org/chip"
 import Image from "next/image";
+import { Popover, PopoverTrigger, PopoverContent} from "@nextui-org/popover";
 
 const Character = (props:any) => {
     const character = props.character
@@ -25,9 +26,22 @@ const Character = (props:any) => {
             <p className="text-black font-semibold">{character.Ocupacion}</p>
            
           </div>
-          <Button className="text-tiny" color="primary" radius="full" size="sm">
-            Notify Me
-          </Button>
+          <Popover
+          
+          showArrow
+          offset={10}
+          placement="bottom"
+          backdrop="blur"
+        >
+          <PopoverTrigger>
+            <Button color="warning" variant="flat" className="capitalize">
+              Historia
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-[500px] p-5">
+          {character.Historia}
+            </PopoverContent>
+        </Popover>
         </CardFooter>
       </Card>
     )

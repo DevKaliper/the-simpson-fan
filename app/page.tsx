@@ -18,10 +18,10 @@ export default function Home() {
 		
 		<main>
 			<h1 className='text-4xl dark:text-yellow-400 font-semibold'>Personajes</h1>
-			<section>
+			<section className='grid grid-cols-3 grid-rows-5 gap-5 gap-x-9 '>
 				{
 					character ? character.map((r:any) => (
-						<div key={r._id}>
+						<div key={r._id} className='col-span-1'>
 							<Character  character={r}/>
 						</div>
 						
