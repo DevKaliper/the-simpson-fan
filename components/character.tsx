@@ -1,6 +1,6 @@
 "use client"
 
-import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
+import {Card, CardHeader, CardFooter} from "@nextui-org/card";
 import {Button} from "@nextui-org/button"
 import {Chip} from "@nextui-org/chip"
 import Image from "next/image";
