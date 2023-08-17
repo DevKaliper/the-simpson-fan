@@ -6,7 +6,7 @@ export const siteConfig = {
 	navItems: [
 		{
 			label: "Quotes",
-			href: "/qq",
+			href: "/quotes",
 		},
     {
       label: "Fan Page",
