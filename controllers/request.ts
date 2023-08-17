@@ -15,3 +15,13 @@ export const getCharacter = async (page:number=1)=>{//Page es el numero de pagin
     }
 }
 
+export const getQuote = async() => {
+    try {
+        const request = await axios.get("https://thesimpsonsquoteapi.glitch.me/quotes")
+        const data =  request.data
+        return data[0]
+    } catch (error) {
+        console.log(error)
+    }
+}
+
