@@ -10,22 +10,22 @@ export const siteConfig = {
 		},
     {
       label: "Fan Page",
-      href: "/ff",
+      href: "https://thesimpson.netlify.app/",
     },
 
 	],
 	navMenuItems: [
 		{
 			label: "Quotes",
-			href: "/q",
+			href: "/quotes",
 		},
 		{
 			label: "Fan Page",
-			href: "/f",
+			href: "https://thesimpson.netlify.app/",
 		},
 		{
 			label: "github",
-			href: "/github",
+			href: "/https://github.com/DevKaliper/the-simpson-fan",
 		},
 	],
 	links: {
